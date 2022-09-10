@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/datepicker.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+
+    <body>
+      <div class="inner-layer">
+          <div class="container">
+            <div class="row no-margin">
+                <div class="col-sm-7">
+                    <div class="content">
+                        <h1>Agenda tu cita hoy y ahorra tiempo</h1>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="form-data">
+                        <div class="form-head">
+                            <h2>Reserva una cita</h2>
+                        </div>
+                        <div class="form-body">
+                            <div class="row form-row">
+                              <input type="text" placeholder="Ingrese sus nombres y apellidos" class="form-control">
+                            </div>
+                            <div class="row form-row">
+                              <input type="text" placeholder="Ingrese su teléfono de contacto" class="form-control">
+                            </div>
+                             <div class="row form-row">
+                              <input type="text" placeholder="Ingrese su correo electrónico" class="form-control">
+                            </div>
+                            <h6>Fecha de la cita</h6>
+                           <div class="row form-row">
+                              <input id="dat" type="text" placeholder="Ingrese fecha" class="form-control">
+                            </div>
+                            
+                            <h6>Seleccione una hora</h6>
+
+                            <div class="row form-row">
+                              <input type="time" name="mytime" id="mytime">
+                            </div>
+
+                          <h6>Motivo de la cita</h6>
+
+                             <div class="row form-row">                              
+                              <textarea rows = "2" cols = "60" placeholder = "Ingrese breve">                                
+                              </textarea>                             
+                            </div>
+                             
+                            </div>
+                             <div class="row form-row">
+                               <button class="btn btn-success btn-appointment">
+                                 Reservar Cita
+                               </button>                               
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </div>
+      
+    </body>
+  
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-datepicker.js"></script>
+
+    <script>
+      $(document).ready(function(){
+          $("#dat").datepicker();
+      })
+    </script>
+    
+  </body>
+</html>
