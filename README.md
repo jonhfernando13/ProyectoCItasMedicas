@@ -1,2 +1,0 @@
-# ProyectoCItasMedicas
-agendamiento de citas
