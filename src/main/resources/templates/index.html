@@ -24,20 +24,20 @@
                         <div class="form-head">
                             <h2>Reserva una cita</h2>
                         </div>
-                        <form th:action="@{/cita/guardar}" method="post" th:object="${post}">
+                        <form>
                         <div class="form-body">
                             <div class="row form-row">
-                              <input type="text" placeholder="Ingrese sus nombres y apellidos" class="form-control" >
+                              <input type="text" placeholder="Ingrese sus nombres y apellidos" class="form-control" id="nombres_apellidos">
                             </div>
                             <div class="row form-row">
-                              <input type="text" placeholder="Ingrese su teléfono de contacto" class="form-control">
+                              <input type="text" placeholder="Ingrese su teléfono de contacto" class="form-control" id="telefono">
                             </div>
                              <div class="row form-row">
-                              <input type="text" placeholder="Ingrese su correo electrónico" class="form-control">
+                              <input type="text" placeholder="Ingrese su correo electrónico" class="form-control" id="correo">
                             </div>
                             <h6>Fecha de la cita</h6>
                            <div class="row form-row">
-                              <input id="dat" type="text" placeholder="Ingrese fecha" class="form-control">
+                              <input id="date" type="text" placeholder="Ingrese fecha" class="form-control">
                             </div>
                             
                             <h6>Seleccione una hora</h6>
@@ -49,13 +49,13 @@
                           <h6>Motivo de la cita</h6>
 
                              <div class="row form-row">                              
-                              <textarea rows = "2" cols = "60" placeholder = "Ingrese breve">                                
+                              <textarea rows = "2" cols = "60" placeholder = "Ingrese breve" id="motivo">                                
                               </textarea>                             
                             </div>
                              
                             </div>
                              <div class="row form-row">
-                               <button class="btn btn-success btn-appointment">
+                               <button class="btn btn-success btn-appointment" id="btn_cita" type='submit'>
                                  Reservar Cita
                                </button>                               
                             </div>
@@ -66,8 +66,9 @@
             </div>
           </div>
       </div>
+      <!--Scripts-->
+      <script src="/src/main/java/com/example/demo/js/crearcita.js"></script>
     </body>
-  </body>
 </html>
 
 
