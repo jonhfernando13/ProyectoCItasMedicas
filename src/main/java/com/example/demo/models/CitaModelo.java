@@ -11,7 +11,7 @@ import javax.persistence.Table;
 public class CitaModelo {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idcita;
 
     private String fecha_hora;
@@ -22,28 +22,17 @@ public class CitaModelo {
 
     private Integer cliente_idusuario;
 
-    private Integer telefono;
-
-    private String correo;
 
 
-    public Integer getTelefono() {
-        return telefono;
+    public CitaModelo(Integer idcita, String fecha_hora, String motivo, Integer medico_idmedico,
+            Integer cliente_idusuario, Integer telefono, String correo) {
+        this.idcita = idcita;
+        this.fecha_hora = fecha_hora;
+        this.motivo = motivo;
+        this.medico_idmedico = medico_idmedico;
+        this.cliente_idusuario = cliente_idusuario;
+      
     }
-
-    public void setTelefono(Integer telefono) {
-        this.telefono = telefono;
-    }
-
-    public String getCorreo() {
-        return correo;
-    }
-
-    public void setCorreo(String correo) {
-        this.correo = correo;
-    }
-
-
 
     public Integer getIdcita() {
         return idcita;
@@ -81,7 +70,5 @@ public class CitaModelo {
         this.cliente_idusuario = cliente_idusuario;
     }
 
-   
-   
 
 }

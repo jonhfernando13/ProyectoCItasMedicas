@@ -11,11 +11,18 @@ public class MedicoModelo {
     @Id
     private Integer idmedico;
 
-    private String nombre_medic;
+    private String nombre;
 
-    private String apellido_medic;
+    private String apellido;
 
-    private String correo_medic;
+    private String correo;
+
+    public MedicoModelo(Integer idmedico, String nombre, String apellido, String correo) {
+        this.idmedico = idmedico;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.correo = correo;
+    }
 
     public Integer getIdmedico() {
         return idmedico;
@@ -25,30 +32,28 @@ public class MedicoModelo {
         this.idmedico = idmedico;
     }
 
-    public String getNombre_medic() {
-        return nombre_medic;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setNombre_medic(String nombre_medic) {
-        this.nombre_medic = nombre_medic;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getApellido_medic() {
-        return apellido_medic;
+    public String getApellido() {
+        return apellido;
     }
 
-    public void setApellido_medic(String apellido_medic) {
-        this.apellido_medic = apellido_medic;
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 
-    public String getCorreo_medic() {
-        return correo_medic;
+    public String getCorreo() {
+        return correo;
     }
 
-    public void setCorreo_medic(String correo_medic) {
-        this.correo_medic = correo_medic;
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
 
-    
-    
 }
