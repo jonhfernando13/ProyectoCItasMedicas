@@ -1,40 +1,32 @@
 const url = "http://localhost:8080/cita/guardar";
 
-
-
-function crear(evt){
-e.preventDefault();
-let form = document.getElementById("form");
-const np = document.getElementById("nombres_apellidos");
-const tel = document.getElementById("telefono");
-const correo = document.getElementById("correo");
-const dia = document.getElementById("date");
-const hora = document.getElementById("mytime");
-const motivo = document.getElementById("motivo");
-const btn = document.getElementById("btn_cita");
+function crear(evt) {
+  evt.preventDefault();
+  let cita = {
+    idcita: 0,
+    fecha_hora: evt.target.fecha_hora.value,
+    motivo: evt.target.motivo.value,
+    medico_idmedico: 1,
+    cliente_idusuario: 1,
+    telefono: evt.target.telefono.value,
+    correo: evt.target.correo.value,
+  };
+  console.log(cita);
+  guardar_datos(cita);
 }
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
 
-  const datos = new FormData(form);
-  /* datos={
-    "idcita":0,
-    "fecha_hora":"2022-09-08 20:01:49",
-    "motivo":"Dolor de cabeza",
-    "medico_idmedico":1,
-    "cliente_idusuario":1,
-    "telefono":5454545,
-    "correo":"ssasa"
-}*/
-  fetch(url, {
+async function guardar_datos(cita) {
+  const resp = await fetch(url, {
     method: "POST",
     headers: {
-      "Accept":"application/json",
+      Accept: "application/json",
       "content-type": "application/json",
     },
-    body: JSON.stringify(datos),
+    body: JSON.stringify(cita),
   })
-    .then(res => res.json())
-    .then(data => console.log(data))
-    .catch(err => console.log(err));
-});
+   .then((res) => res.json())
+    .then((data) => console.log(data))
+    .catch((err) => console.log(err));
+}
+
+
