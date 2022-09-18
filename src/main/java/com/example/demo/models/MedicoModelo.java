@@ -17,12 +17,6 @@ public class MedicoModelo {
 
     private String correo;
 
-    public MedicoModelo(Integer idmedico, String nombre, String apellido, String correo) {
-        this.idmedico = idmedico;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.correo = correo;
-    }
 
     public Integer getIdmedico() {
         return idmedico;

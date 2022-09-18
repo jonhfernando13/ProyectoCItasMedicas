@@ -19,13 +19,7 @@ public class ClienteModelo {
 
     private Integer telefono;
 
-    public ClienteModelo(Integer idusuario, String nombre, String apellido, String correo, Integer telefono) {
-        this.idusuario = idusuario;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.correo = correo;
-        this.telefono = telefono;
-    }
+  
 
     public Integer getIdusuario() {
         return idusuario;

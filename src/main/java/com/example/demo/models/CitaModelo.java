@@ -24,16 +24,6 @@ public class CitaModelo {
 
 
 
-    public CitaModelo(Integer idcita, String fecha_hora, String motivo, Integer medico_idmedico,
-            Integer cliente_idusuario, Integer telefono, String correo) {
-        this.idcita = idcita;
-        this.fecha_hora = fecha_hora;
-        this.motivo = motivo;
-        this.medico_idmedico = medico_idmedico;
-        this.cliente_idusuario = cliente_idusuario;
-      
-    }
-
     public Integer getIdcita() {
         return idcita;
     }
