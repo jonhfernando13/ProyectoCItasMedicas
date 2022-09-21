@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <title>Sistema de Gestión de Citas</title>
+  </head>
+  <body>
+    <!--Inicio del panel de navegación-->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          
+
+          Sistema de gestión de citas médicas</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Gestión de Citas</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--Final del panel de navegación-->
+
+    <!--Inicio del contenedor general-->
+    <div class="container">
+      <div class="row">
+        <h1>Listado de citas realizadas</h1>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-3">
+          <a class="btn btn-primary btn-sm mb-3">Agregar cita</a>
+        </div>
+      </div>
+    </div>
+    <!--Fin del contenedor general-->
+
+    <!--Inicio de la tabla-->
+    <div class="container container-fluid">
+      <table class="table table-striped table-bordered">
+        <thead class="table-info">
+          <tr>
+            <th>Nombre(s) y apellido(s)</th>
+            <th>Teléfono de contacto</th>
+            <th>Correo electrónico</th>
+            <th>Fecha de la cita</th>
+            <th>Hora</th>
+            <th>Motivo de la cita</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <th:block>
+                <label />
+                <th:block></th:block>
+              </th:block>
+            </td>
+            <td>
+              <a class="btn btn-warning">Editar</a>
+              <a class="btn btn-danger">Borrar</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--Fin de la tabla-->
+  </body>
+</html>
