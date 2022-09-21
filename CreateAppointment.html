@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <title>Sistema de Gestión de Citas</title>
+  </head>
+  <body>
+    <!--Inicio del panel de navegación-->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          
+
+          Sistema de Gestión de Citas médicas</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Gestión de citas</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--Final del panel de navegación-->
+    <!--Inicio del card-->
+    <div class="container mt-3">
+      <div class="row">
+        <div class="card text-center">
+          <div class="card-body">
+            <h1 class="card-title">Crear nueva cita médica</h1>
+            <!--Inicio del formulario-->
+            <form>
+              <div class="mb-3">
+                <div class="form-group">
+                  <label>Nombre y apellidos del paciente</label>
+                  <input
+                    type="text"
+                    name="firstName"
+                    class="form-control"
+                    placeholder="Ingrese nombres y apellidos del paciente"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Teléfono de contacto</label>
+                  <input
+                    type="text"
+                    name="lastName"
+                    class="form-control"
+                    placeholder="Ingrese el teléfono del paciente"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Correo electrónico del paciente</label>
+                  <input
+                    type="text"
+                    name="email"
+                    class="form-control"
+                    placeholder="Ingrese el correo electrónico del paciente"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Fecha de la cita</label>
+                  <input id="dat" type="text" placeholder="Ingrese fecha" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label>Hora de la cita</label>
+                  <br><input type="time" name="mytime" id="mytime">                  
+                </div>
+                <div class="form-group">
+                  <label>Motivo de la cita</label>
+                  <input
+                    type="text"
+                    name="email"
+                    class="form-control"
+                    placeholder="Ingrese el motivo para la cita"
+                  />
+                </div>
+                <div class="box-footer mt-4">
+                  <button type="submit" class="btn btn-primary">Crear nueva cita</button>
+                </div>
+              </div>
+            </form>
+            <!--Final del formularios-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Final del card-->
+
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap-datepicker.js"></script>
+
+    <script>
+      $(document).ready(function(){
+          $("#dat").datepicker();
+      })
+    </script>
+  </body>
+</html>
+
