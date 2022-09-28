@@ -3,7 +3,6 @@ package com.example.demo.controller;
 import java.util.ArrayList;
 import java.util.Optional;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,7 +29,7 @@ public class CitaController {
 
     }
 
-    @PostMapping(value = "/guardar",produces = org.springframework.http.MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/guardar")
     public CitaModelo guardarcita(@RequestBody CitaModelo cita) {
 
         return this.citaService.guardarcita(cita);
