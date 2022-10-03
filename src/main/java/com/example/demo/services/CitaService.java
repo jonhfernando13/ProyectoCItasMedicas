@@ -1,8 +1,6 @@
 package com.example.demo.services;
 
-
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,17 +22,12 @@ public class CitaService {
         return citaRepository.save(cita);
     }
 
-    public boolean eliminarcita(Integer id) {
-        try {
-            citaRepository.deleteById(id);
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
+    public void eliminarcita(Integer idcita) {
+        citaRepository.deleteById(idcita);
     }
 
-    public Optional<CitaModelo> obtenerxid(Integer id) {
-        return citaRepository.findById(id);
+    public CitaModelo obtenerxid(Integer id) {
+        return citaRepository.findById(id).get();
     }
 
     public CitaModelo actualizarcita(CitaModelo cita) {

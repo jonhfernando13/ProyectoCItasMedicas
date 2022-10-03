@@ -51,7 +51,7 @@
 
       <div class="row">
         <div class="col-lg-3">
-          <a class="btn btn-primary btn-sm mb-3">Agregar cita</a>
+          <a th:href="@{/}" class="btn btn-primary btn-sm mb-3">Agregar cita</a>
         </div>
       </div>
     </div>
@@ -78,8 +78,8 @@
             <td th:text="${CitaModelo.medico_idmedico}"></td>
             <td th:text="${CitaModelo.cliente_idusuario}"></td>
             <td>
-              <a class="btn btn-warning">Editar</a>
-              <a class="btn btn-danger">Borrar</a>
+              <a th:href="@{/actualizar/{id}(id=${CitaModelo.idcita})}" class="btn btn-warning">Editar</a>
+              <a th:href="@{/eliminar/{id}(id=${CitaModelo.idcita})}"class="btn btn-danger">Borrar</a>
             </td>
           </tr>
         </tbody>

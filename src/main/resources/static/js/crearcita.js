@@ -16,7 +16,7 @@ function crear(evt) {
 }
 
 async function guardar_datos(cita) {
-  const resp = await fetch(url+"/guardar", {
+  const resp = await fetch(url+"/guardar/", {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -29,14 +29,7 @@ async function guardar_datos(cita) {
     .catch((err) => console.log(err));
 }
 
-async function obtenerusuarios(url) {
-  const resp = await fetch(url+"/ver", {
-    method: "GET", 
-  })
-  const cliente = JSON.stringify(await resp.json())
-  console.log(JSON.stringify(JSON.parse(await resp.json())))
-  return cliente
-}
+
 
 
 
