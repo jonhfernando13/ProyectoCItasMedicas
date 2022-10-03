@@ -1,6 +1,7 @@
 package com.example.demo.services;
 
-import java.util.ArrayList;
+
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +16,8 @@ public class CitaService {
     @Autowired
     CitaRepository citaRepository;
 
-    public ArrayList<CitaModelo> obtenercitas() {
-        return (ArrayList<CitaModelo>) citaRepository.findAll();
+    public List<CitaModelo> obtenercitas() {
+        return (List<CitaModelo>) citaRepository.findAll();
     }
 
     public CitaModelo guardarcita(CitaModelo cita) {

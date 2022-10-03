@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -17,8 +17,6 @@
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          
-
           Sistema de gestión de citas médicas</a
         >
         <button
@@ -64,28 +62,21 @@
       <table class="table table-striped table-bordered">
         <thead class="table-info">
           <tr>
-            <th>Nombre(s) y apellido(s)</th>
-            <th>Teléfono de contacto</th>
-            <th>Correo electrónico</th>
-            <th>Fecha de la cita</th>
-            <th>Hora</th>
-            <th>Motivo de la cita</th>
+            <th>id</th>
+            <th>Fecha_Hora</th>
+            <th>Motivo</th>
+            <th>idmedico</th>
+            <th>idcliente</th>
             <th>Acciones</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>
-              <th:block>
-                <label />
-                <th:block></th:block>
-              </th:block>
-            </td>
+          <tr th:each="CitaModelo:${cita}">
+            <td th:text="${CitaModelo.idcita}"></td>
+            <td th:text="${CitaModelo.fecha_hora}"></td>
+            <td th:text="${CitaModelo.motivo}"></td>
+            <td th:text="${CitaModelo.medico_idmedico}"></td>
+            <td th:text="${CitaModelo.cliente_idusuario}"></td>
             <td>
               <a class="btn btn-warning">Editar</a>
               <a class="btn btn-danger">Borrar</a>

@@ -1,4 +1,4 @@
-const url = "http://localhost:8080/cita/guardar";
+const url = "http://localhost:8080"
 
 function crear(evt) {
   evt.preventDefault();
@@ -16,7 +16,7 @@ function crear(evt) {
 }
 
 async function guardar_datos(cita) {
-  const resp = await fetch(url, {
+  const resp = await fetch(url+"/guardar", {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -24,9 +24,21 @@ async function guardar_datos(cita) {
     },
     body: JSON.stringify(cita),
   })
-   .then((res) => res.json())
+    .then((res) => res.json())
     .then((data) => console.log(data))
     .catch((err) => console.log(err));
 }
+
+async function obtenerusuarios(url) {
+  const resp = await fetch(url+"/ver", {
+    method: "GET", 
+  })
+  const cliente = JSON.stringify(await resp.json())
+  console.log(JSON.stringify(JSON.parse(await resp.json())))
+  return cliente
+}
+
+
+
 
 

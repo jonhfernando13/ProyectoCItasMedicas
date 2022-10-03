@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -50,7 +50,8 @@
                                <button class="btn btn-success btn-appointment" id="btn_cita" type='submit'>
                                Reservar Cita
                                </button> 
-                               <a href="./gestion.html" class="btn">home</a> 
+                               <a th:href="@{/gestion}" class="btn" aria-current="page"
+                               href="#">home</a> 
                             </div>
                         </div>
                        <form>
