@@ -22,10 +22,12 @@ async function guardar_datos(cita) {
       "content-type": "application/json",
     },
     body: JSON.stringify(cita),
+   
   })
     .then((res) => res.json())
-    .then((data) => console.log(data))
-    .catch((err) => console.log(err));
+    .then((data) =>  console.log(data))
+    .catch((err) => console.log(err))
+    window.location.href = url+"/gestion/";
 }
 
 

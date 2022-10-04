@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -38,11 +39,25 @@ public class CitaController {
     }
 
     @GetMapping(value = "/actualizar/{idcita}")
-    public String actualizarcita(@PathVariable(name = "idcita") Integer id, Model model) {
+    public String editarcita(@PathVariable(name = "idcita") Integer id, Model model) {
         CitaModelo cm = citaService.obtenerxid(id);
-        model.addAttribute("CitaModel", cm);
+        model.addAttribute("CitaModelo", cm);
 
         return "actualizar";
+    }
+
+    @PostMapping("/gestion/{idcita}")
+    public String actualizarcita(@PathVariable(name = "idcita") Integer id, @ModelAttribute("CitaModelo") CitaModelo cita,Model model) {
+   
+        CitaModelo citaexisten = citaService.obtenerxid(id);
+
+        citaexisten.setIdcita(id);
+        citaexisten.setFecha_hora(cita.getFecha_hora());
+        citaexisten.setMotivo(cita.getMotivo());
+
+        citaService.actualizarcita(citaexisten);
+
+        return "redirect:/gestion";
     }
 
     @RequestMapping("/gestion")
