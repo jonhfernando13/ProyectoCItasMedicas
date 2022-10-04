@@ -23,29 +23,17 @@
                 <div class="col-sm-5">
                     <div class="form-data">
                         <div class="form-head">
-                            <h2>Editar cita</h2>
+                            <h2>Reserva una cita</h2>
                         </div>
-                        <form id="form" th:action="@{/actualizar/{id} (id=${CitaModelo.idcita})}" th:object"${citaModelo}" method="POST">
+                        <form id="form" th:action="@{/actualizar/{id} (id=${CitaModelo.idcita})}" th:object="${CitaModelo}" method="POST">
                         <div class="form-body">
-                        
-                            <div class="row form-row">
-                              <input type="text" placeholder="Ingrese sus nombres y apellidos" class="form-control" id="nombre" th:field="*{nombre}">
-                            </div>
-                            <div class="row form-row">
-                              <input type="text" placeholder="Ingrese su teléfono de contacto" class="form-control" id="telefono" name="telefono" th:field="*{telefono}">
-                            </div>
-                             <div class="row form-row">
-                              <input type="text" placeholder="Ingrese su correo electrónico" class="form-control" id="correo" name="correo" th:field="*{correo}">
-                            </div>
                             <h6>Fecha y la hora de la cita</h6>
                            <div class="row form-row">
-                              <input id="date" type="datetime-local" placeholder="Ingrese fecha" class="form-control" name="fecha_hora"  th:field="*{fecha_hora}">
+                              <input id="date" type="datetime-local" placeholder="Ingrese fecha" class="form-control" name="fecha_hora" th:field="*{fecha_hora}">
                             </div>
                                   <h6>Motivo de la cita</h6>
                              <div class="row form-row">                              
-                               <input type="text" class="form-control" id="motivo" name="motivo" placeholder="motivo"  th:field="*{motivo}">                        
-                            </div>
-                             
+                               <input type="text" class="form-control" id="motivo" name="motivo" placeholder="motivo" th:field="*{motivo}">                        
                             </div>
                              <div class="row form-row">
                                <button class="btn btn-success btn-appointment" id="btn_cita" type='submit'>
@@ -61,10 +49,8 @@
             </div>
           </div>
       </div>
- 
     </body>
 </html>
-
 
 
 

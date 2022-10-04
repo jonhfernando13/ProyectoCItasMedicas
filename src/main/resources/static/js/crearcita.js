@@ -8,8 +8,7 @@ function crear(evt) {
     motivo: evt.target.motivo.value,
     medico_idmedico: 1,
     cliente_idusuario: 1,
-    telefono: evt.target.telefono.value,
-    correo: evt.target.correo.value,
+
   };
   console.log(cita);
   guardar_datos(cita);
