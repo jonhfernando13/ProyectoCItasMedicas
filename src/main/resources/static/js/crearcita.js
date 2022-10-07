@@ -35,4 +35,3 @@ async function guardar_datos(cita) {
 
 
 
-
