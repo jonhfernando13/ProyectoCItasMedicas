@@ -69,9 +69,7 @@
 			<artifactId>maven-dependency-plugin</artifactId>
 			<version>3.0.2</version>
 		</dependency>
-
 	</dependencies>
-
 
 	<build>
 		<plugins>
@@ -85,6 +83,7 @@
 				<artifactId>heroku-maven-plugin</artifactId>
 				<version>3.0.4</version>
 			</plugin>
+
 			<plugin>
 				<groupId>com.heroku.sdk</groupId>
 				<artifactId>heroku-maven-plugin</artifactId>
@@ -101,6 +100,10 @@
 					</processTypes>
 				</configuration>
 			</plugin>
+
+		
+			
+
 		</plugins>
 	</build>
 
