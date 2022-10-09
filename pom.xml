@@ -77,50 +77,51 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-
-			
-			
-
+			<plugin>
+				<groupId>com.heroku.sdk</groupId>
+				<artifactId>heroku-maven-plugin</artifactId>
+				<version>3.0.3</version>
+			</plugin>
 		</plugins>
 	</build>
 
 	<profiles>
-        <profile>
-            <id>heroku</id>
-            <activation>
-                <property>
-                    <name>heroku</name>
-                </property>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>com.heroku.sdk</groupId>
-                        <artifactId>heroku-maven-plugin</artifactId>
-                        <version>1.1.1</version>
-                        <configuration>
-                            <appName>exampledriven-springboot-dev</appName>
-                            <includeTarget>false</includeTarget>
-                            <includes>
-                                <include>${basedir}/${full-artifact-name}</include>
-                            </includes>
-                            <jdkVersion>1.8</jdkVersion>
-                            <processTypes>
-                                <web>java $JAVA_OPTS -jar ${full-artifact-name} --spring.profiles.active=heroku</web>
-                            </processTypes>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>deploy</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
+		<profile>
+			<id>heroku</id>
+			<activation>
+				<property>
+					<name>heroku</name>
+				</property>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>com.heroku.sdk</groupId>
+						<artifactId>heroku-maven-plugin</artifactId>
+						<version>1.1.1</version>
+						<configuration>
+							<appName>exampledriven-springboot-dev</appName>
+							<includeTarget>false</includeTarget>
+							<includes>
+								<include>${basedir}/${full-artifact-name}</include>
+							</includes>
+							<jdkVersion>1.8</jdkVersion>
+							<processTypes>
+								<web>java $JAVA_OPTS -jar ${full-artifact-name} --spring.profiles.active=heroku</web>
+							</processTypes>
+						</configuration>
+						<executions>
+							<execution>
+								<phase>verify</phase>
+								<goals>
+									<goal>deploy</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 
 </project>
