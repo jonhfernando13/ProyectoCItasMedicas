@@ -93,7 +93,7 @@
 				<configuration>
 					<appName>demo</appName>
 					<processTypes>
-						<web>java $JAVA_OPTS -cp target/classes:target/dependency/* Main</web>
+						<web>java $JAVA_OPTS -cp target/classes:target/dependency/demo Main</web>
 					</processTypes>
 				</configuration>
 			</plugin>
