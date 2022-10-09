@@ -1,1 +1,1 @@
-web: java -jar demo/target/demo-1.0.jar
+web: java -jar target/proyectominticc-1.0.0.jar
