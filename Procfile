@@ -1,1 +1,1 @@
-web: java DemoApplication
+web: java proyectominticc
