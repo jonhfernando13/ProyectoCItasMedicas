@@ -92,15 +92,14 @@
 				<artifactId>heroku-maven-plugin</artifactId>
 				<version>3.0.4</version>
 				<configuration>
-					<appName>proyectominticc</appName>
+					<appName>DemoApplication</appName>
 					<jdkVersion>1.8</jdkVersion>
 					<processTypes>
 						<web>java $JAVA_OPTS -cp target/classes:target/dependency/* Main</web>
 					</processTypes>
 				</configuration>
 			</plugin>
-
-
+			
 		</plugins>
 	</build>
 </project>
