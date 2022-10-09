@@ -80,7 +80,7 @@
 			<plugin>
 				<groupId>com.heroku.sdk</groupId>
 				<artifactId>heroku-maven-plugin</artifactId>
-				<version>3.0.3</version>
+				<version>3.0.4</version>
 			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -90,16 +90,11 @@
 			<plugin>
 				<groupId>com.heroku.sdk</groupId>
 				<artifactId>heroku-maven-plugin</artifactId>
-				<version>3.0.3</version>
+				<version>3.0.4</version>
 				<configuration>
 					<appName>proyectominticc</appName>
-					<includeTarget>false</includeTarget>
-					<includes>
-						<include>demo-0.0.1-SNAPSHOT/demo-0.0.1-SNAPSHOT.jar</include>
-					</includes>
 					<jdkVersion>1.8</jdkVersion>
 					<processTypes>
-						<web>java $JAVA_OPTS -jar target/demo-0.0.1-SNAPSHOT.jar</web>
 						<web>java $JAVA_OPTS -cp target/classes:target/dependency/* Main</web>
 					</processTypes>
 				</configuration>
@@ -127,7 +122,7 @@
 					</execution>
 				</executions>
 			</plugin>
+
 		</plugins>
 	</build>
-
 </project>
