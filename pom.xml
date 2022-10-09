@@ -100,7 +100,7 @@
 					<jdkVersion>${java.version}</jdkVersion>
 					<processTypes>
 						<web>java $JAVA_OPTS -jar target/$demo-0.0.1-SNAPSHOT.jar</web>
-						
+						<web>java $JAVA_OPTS -cp target/classes:target/dependency/* Main</web>
 					</processTypes>
 				</configuration>
 			</plugin>
