@@ -1,1 +1,1 @@
-web: java DemoApplication.java
+web: gunicorn app:app
