@@ -1,5 +1,7 @@
 const url = "http://localhost:8080"
 
+.listen(process.env.PORT || 8080)
+
 function crear(evt) {
   evt.preventDefault();
   let cita = {
