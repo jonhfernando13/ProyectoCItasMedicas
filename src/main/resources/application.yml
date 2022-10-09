@@ -1,0 +1,8 @@
+spring:
+    profiles: heroku
+server:
+  port: ${PORT}
+worker:
+  scheme: https
+  host: ${WORKER_HOST}
+  port: 443
